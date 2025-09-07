@@ -3,3 +3,47 @@ http://localhost:8001/api/modes/game?gameMode=chicken-road-two&operatorId=63565b
 /api/modes/game?gameMode=chicken-road-two&operatorId=63565b4f-abbe-4850-9dac-9d50e5dc4283&authToken=e073e0e40c704b5b9544cc8b5e1c61ef_inout&currency=PHP&lang=en&theme=&gameCustomizationId=&lobbyUrl=
 
  node .\chicken-road-server.js
+
+
+
+
+
+ pm2 start ecosystem.config.js
+pm2 save
+pm2 startup
+
+
+
+
+location / {
+    proxy_pass http://127.0.0.1:8001;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+location /socket.io/ {
+    proxy_pass http://127.0.0.1:8001;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
+
+
+
+https://你的域名/api/modes/game?gameMode=chicken-road-two&operatorId=63565b4f-abbe-4850-9dac-9d50e5dc4283&authToken=e073e0e40c704b5b9544cc8b5e1c61ef_inout&currency=PHP&lang=en&theme=&gameCustomizationId=&lobbyUrl=
+https://chick.xoxbrwin.com/api/modes/game?gameMode=chicken-road-two&operatorId=63565b4f-abbe-4850-9dac-9d50e5dc4283&authToken=e073e0e40c704b5b9544cc8b5e1c61ef_inout&currency=PHP&lang=en&theme=&gameCustomizationId=&lobbyUrl=
+
+https://chick.injack04.com/api/modes/game?gameMode=chicken-road-two&operatorId=63565b4f-abbe-4850-9dac-9d50e5dc4283&authToken=e073e0e40c704b5b9544cc8b5e1c61ef_inout&currency=PHP&lang=en&theme=&gameCustomizationId=&lobbyUrl=
+injack04
+
+# 查看应用状态
+pm2 status
+# 查看日志
+pm2 logs chick-game
+# 重启应用
+pm2 restart chick-game

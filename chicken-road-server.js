@@ -141,10 +141,15 @@ app.use((req, res, next) => {
     // 匹配真实 API 的 CORS 头
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-LANG, Pragma, Cache-Control, Upgrade, Connection, Cookie, x-requested-with');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-LANG, Pragma, Cache-Control, Upgrade, Connection, Cookie, x-requested-with, X-Forwarded-Proto, X-Forwarded-Host');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Expose-Headers', 'Country-Code');
     res.header('Access-Control-Max-Age', '1728000');
+    
+    // 支持Cloudflare代理的headers
+    if (req.get('x-forwarded-proto') === 'https') {
+        res.header('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+    }
     
     if (req.method === 'OPTIONS') {
         res.sendStatus(200);
@@ -1214,9 +1219,14 @@ app.get('/api/modes/game', (req, res) => {
     
     // 根据参数动态修改内容
     // 更新VITE_API_ENDPOINT以确保正确的API调用
+    // 动态检测协议，支持HTTPS
+    const protocol = req.get('x-forwarded-proto') || req.protocol || 'https';
+    const host = req.get('host') || req.get('x-forwarded-host') || 'chick.xoxbrwin.com';
+    const apiEndpoint = `${protocol}://${host}`;
+    
     content = content.replace(
-        'VITE_API_ENDPOINT: "http://localhost:8001"',
-        `VITE_API_ENDPOINT: "http://localhost:8001"`
+        'VITE_API_ENDPOINT: "https://chick.xoxbrwin.com"',
+        `VITE_API_ENDPOINT: "${apiEndpoint}"`
     );
     
     // 添加游戏参数到window.env
