@@ -1,0 +1,172 @@
+chiken.png
+size:1476,269
+filter:Linear,Linear
+pma:true
+$
+bounds:783,2,44,60
+rotate:90
+1111122222333
+bounds:1086,162,105,121
+rotate:90
+1111122222333123
+bounds:1209,163,104,120
+offsets:0,0,105,121
+rotate:90
+1111122223344
+bounds:569,17,49,78
+rotate:90
+1111122323232
+bounds:2,45,170,222
+offsets:0,0,172,223
+11112222211
+bounds:1331,166,104,101
+11112222211234
+bounds:408,6,93,102
+offsets:2,1,97,105
+rotate:90
+111122223333444
+bounds:680,2,34,42
+offsets:0,1,35,43
+rotate:90
+1112223333434
+bounds:1401,54,38,41
+offsets:1,0,39,42
+123122331112334
+bounds:958,151,126,116
+offsets:2,1,129,124
+2211132333
+bounds:1186,95,65,54
+offsets:0,1,65,55
+rotate:90
+22231113344
+bounds:512,2,64,55
+offsets:0,1,65,56
+rotate:90
+3344555656556
+bounds:2,14,29,160
+rotate:90
+566778878990
+bounds:174,2,91,232
+rotate:90
+778887899898
+bounds:958,123,26,117
+rotate:90
+988998675654
+bounds:542,176,91,232
+rotate:90
+Group 1000006385 6
+bounds:542,116,58,218
+offsets:1,2,61,221
+rotate:90
+Group 1000006386
+bounds:542,68,46,139
+rotate:90
+Layer 10
+bounds:2,2,10,15
+offsets:1,1,12,18
+rotate:90
+Layer 11
+bounds:1047,53,49,68
+offsets:2,1,52,70
+Layer 12
+bounds:1309,98,41,63
+Layer 1212
+bounds:1242,99,65,62
+offsets:7,1,77,65
+Layer 13
+bounds:1348,47,51,48
+Layer 14
+bounds:683,38,98,76
+Layer 15
+bounds:783,48,93,76
+offsets:1,1,95,78
+Layer 16
+bounds:955,2,48,72
+rotate:90
+Layer 17
+bounds:1188,32,61,56
+rotate:90
+Layer 18
+bounds:878,30,94,75
+offsets:1,2,96,78
+rotate:90
+Layer 19
+bounds:1029,2,48,68
+offsets:1,1,51,70
+rotate:90
+Layer 20
+bounds:174,95,186,172
+Layer 22
+bounds:1352,97,56,19
+Layer 23
+bounds:649,12,54,29
+rotate:90
+Layer 24
+bounds:1099,3,40,15
+Layer 25
+bounds:1437,166,36,24
+Layer 3
+bounds:1303,39,57,43
+offsets:1,1,59,46
+rotate:90
+Layer 4
+bounds:1188,2,28,34
+offsets:1,1,30,36
+rotate:90
+Layer 45555555
+bounds:1437,192,36,37
+offsets:1,0,38,38
+rotate:90
+Layer 5
+bounds:1303,2,35,49
+offsets:1,1,38,51
+rotate:90
+Layer 5 copy
+bounds:1437,230,37,37
+Layer 533333333
+bounds:164,36,7,7
+offsets:1,0,9,8
+Layer 55555555
+bounds:569,2,13,58
+offsets:2,0,17,58
+rotate:90
+Layer 6
+bounds:1246,36,55,61
+offsets:1,1,57,63
+Layer 6 copy
+bounds:1352,118,58,46
+Layer 655555555
+bounds:876,7,35,21
+offsets:1,1,37,23
+Layer 7
+bounds:1408,18,34,33
+rotate:90
+Layer 8
+bounds:1354,2,52,43
+Layer 9
+bounds:762,156,12,18
+offsets:2,1,15,20
+beak-down
+bounds:845,12,34,29
+rotate:90
+beak-up
+bounds:1412,121,41,43
+body
+bounds:362,101,178,166
+crest
+bounds:955,52,90,69
+mouth-inside
+bounds:512,69,28,30
+offsets:1,1,30,32
+shadow
+bounds:776,126,180,141
+offsets:1,1,182,143
+wing-down
+bounds:1099,20,87,68
+offsets:1,1,89,70
+wing-up
+bounds:1098,90,86,70
+offsets:1,1,88,72
+yazik
+bounds:724,2,34,40
+rotate:90

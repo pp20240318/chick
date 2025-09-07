@@ -1,0 +1,21 @@
+{
+  "name": "9kboss-local-server",
+  "version": "1.0.0",
+  "description": "本地API服务器",
+  "main": "local-server.js",
+  "scripts": {
+    "start": "node local-server.js",
+    "dev": "nodemon local-server.js",
+    "socket": "node socket-server.js",
+    "chicken": "node chicken-road-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
