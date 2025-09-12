@@ -10858,6 +10858,7 @@ img:nth-child(2) {
             , lX = (0,
           h.lazy)( () => Promise.all([i.e("939"), i.e("402")]).then(i.bind(i, 2125)))
             , lK = p.createRoot(document.getElementById("root"));
+            console.log("=======>window.env.VITE_WS_ENDPOINT",window.env.VITE_WS_ENDPOINT);
           la.init({
               lobby: {
                   isEnabled: window.env.IS_LOBBY_ENABLED
